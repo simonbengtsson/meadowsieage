@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "assets:manifest": "bun run scripts/generate-asset-manifest.ts",
     "dev": "bun --bun vite",
     "build": "tsc && bun --bun vite build && cd dist && zip -r game.zip . -x game.zip",
     "preview": "bun --bun vite preview"

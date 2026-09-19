@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { AssetBrowserScene } from "./game/scenes/AssetBrowserScene";
 import { AssetGalleryScene } from "./game/scenes/AssetGalleryScene";
 import "./style.css";
 
@@ -9,7 +10,7 @@ new Phaser.Game({
   height: 720,
   backgroundColor: "#101a20",
   pixelArt: true,
-  scene: AssetGalleryScene,
+  scene: [AssetGalleryScene, AssetBrowserScene],
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,

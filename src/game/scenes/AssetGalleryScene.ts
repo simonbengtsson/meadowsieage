@@ -264,6 +264,25 @@ export class AssetGalleryScene extends Phaser.Scene {
       })
       .setResolution(2);
 
+    const browserButton = this.add
+      .rectangle(1090, 58, 300, 48, 0x41612f)
+      .setStrokeStyle(1, 0xaed66f)
+      .setInteractive({ useHandCursor: true });
+
+    this.add
+      .text(1090, 58, "Browse all 410 PNGs →", {
+        color: "#f4f8e9",
+        fontFamily: "sans-serif",
+        fontSize: "17px",
+        fontStyle: "bold",
+      })
+      .setOrigin(0.5)
+      .setResolution(2);
+
+    browserButton.on("pointerover", () => browserButton.setFillStyle(0x527a3b));
+    browserButton.on("pointerout", () => browserButton.setFillStyle(0x41612f));
+    browserButton.on("pointerdown", () => this.scene.start("asset-browser"));
+
     this.createTerrainSection();
     this.createAnimationSection();
     this.createWorkerSection();
