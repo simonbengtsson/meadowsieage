@@ -908,7 +908,9 @@ export class MeadowSiegeScene extends Phaser.Scene {
     attacker.lastAttackAt = time;
     target.hp -= attacker.damage;
     this.updateUnitDecorations(target);
-    target.sprite.setTintFill(0xffffff);
+    target.sprite
+      .setTint(0xffffff)
+      .setTintMode(Phaser.TintModes.FILL);
     this.time.delayedCall(70, () => {
       if (!target.dead) target.sprite.clearTint();
     });
