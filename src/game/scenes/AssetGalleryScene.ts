@@ -3,7 +3,7 @@ import Phaser from "phaser";
 const WIDTH = 1280;
 const VIEWPORT_HEIGHT = 720;
 const CONTENT_HEIGHT = 2490;
-const ASSET_ROOT = "/assets";
+const ASSET_ROOT = `${import.meta.env.BASE_URL}assets`;
 
 const FACTIONS = ["Black", "Blue", "Purple", "Red", "Yellow"] as const;
 

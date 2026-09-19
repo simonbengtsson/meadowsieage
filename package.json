@@ -1,5 +1,5 @@
 {
-  "name": "grassyworld",
+  "name": "meadowsieage",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,13 +7,16 @@
     "assets:manifest": "bun run scripts/generate-asset-manifest.ts",
     "dev": "bun --bun vite",
     "build": "tsc && bun --bun vite build && cd dist && zip -r game.zip . -x game.zip",
-    "preview": "bun --bun vite preview"
+    "preview": "bun run build && wrangler dev",
+    "deploy": "bun run build && wrangler deploy"
   },
   "dependencies": {
     "phaser": "^3.90.0"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.56.0",
     "typescript": "^5.9.2",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "wrangler": "^4.135.0"
   }
 }

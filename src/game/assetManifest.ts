@@ -5,7 +5,7 @@ export type AssetEntry = {
   name: string;
 };
 
-export const ASSET_MANIFEST = [
+const ASSET_MANIFEST_ENTRIES = [
   {
     "path": "/assets/buildings/black-buildings/archery.png",
     "category": "buildings",
@@ -2467,3 +2467,9 @@ export const ASSET_MANIFEST = [
     "name": "warrior-run"
   }
 ] as const satisfies readonly AssetEntry[];
+
+export const ASSET_MANIFEST: readonly AssetEntry[] =
+  ASSET_MANIFEST_ENTRIES.map((asset) => ({
+    ...asset,
+    path: `${import.meta.env.BASE_URL}${asset.path.replace(/^\//, "")}`,
+  }));
