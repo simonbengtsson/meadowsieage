@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun --bun vite",
-    "build": "tsc && bun --bun vite build",
+    "build": "tsc && bun --bun vite build && cd dist && zip -r game.zip . -x game.zip",
     "preview": "bun --bun vite preview"
   },
   "dependencies": {
