@@ -248,7 +248,7 @@ export class AssetGalleryScene extends Phaser.Scene {
     this.cameras.main.setBounds(0, 0, WIDTH, CONTENT_HEIGHT);
 
     this.add
-      .text(48, 38, "Grassy World · Asset Gallery", {
+      .text(48, 38, "Meadow Siege · Asset Gallery", {
         color: "#f7efc3",
         fontFamily: "sans-serif",
         fontSize: "34px",
