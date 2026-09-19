@@ -1,7 +1,7 @@
 {
   "name": "meadowsieage",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "assets:manifest": "bun run scripts/generate-asset-manifest.ts",
@@ -11,12 +11,12 @@
     "deploy": "bun run build && wrangler deploy"
   },
   "dependencies": {
-    "phaser": "^3.90.0"
+    "phaser": "^4.2.1"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.56.0",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.7",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0",
     "wrangler": "^4.135.0"
   }
 }
